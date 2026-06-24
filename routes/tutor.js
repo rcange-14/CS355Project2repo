@@ -8,7 +8,7 @@ const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GE
 
 const SUBJECTS = ['Math', 'Science', 'History', 'English', 'Computer Science'];
 
-// GET /tutor - show the subject + question form (only if logged in)
+
 router.get('/', requireAuth, function (req, res) {
   res.render('tutor', {
     name: req.session.name,
@@ -20,7 +20,7 @@ router.get('/', requireAuth, function (req, res) {
   });
 });
 
-// POST /tutor/ask - send the question + subject to Gemini, render the answer
+
 router.post('/ask', requireAuth, async function (req, res) {
   const { subject, question } = req.body;
 
