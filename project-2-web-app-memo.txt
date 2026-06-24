@@ -1,0 +1,68 @@
+# Project 2: AI Full Stack Web App
+
+## Project Introduction
+
+In this project you will be implementing a GenAI Web App of your choosing, and develop/setup the frontend, backend and database and finally host it. 
+
+Examples of GenAI Apps:
+	1. Quiz app
+	2. Tutoring app
+	3. Scheduling app
+	4. Coding app
+	5. Lesson planning app
+	6. Financial planning app
+	7. Vocation planning app
+	8. Therapy app
+	9. Etc.
+
+--------------------------------------------------
+## Required
+The required portions will be:
+- Sign up / Sign in pages
+- Main page(s): at least one but you can have more
+- A database that will keep track of at least the user information's: username, email, password.
+
+In the main page (accessible only after signup) you will use Google's Gemini API as you model. You are welcome to choose another API, if you are familiar or it's easier for you to get started.
+
+
+You should maintain and submit a README.md file. In this file you should include all the features you have developed, how to run the server, the name the API, database schema. 
+
+
+Use of GPT, Google, Stack Overflow are allowed, however you should possess full knowledge of the code and how it works. Otherwise, a lower/failing grade will be given.
+
+--------------------------------------------------
+## Deployment
+You are required to deploy/host your app on the internet. There are many hosting services out there, but in any case do NOT enter any card/payment details, there is not need for that. These hosting services provide free tier subscriptions for small projects like ours. Examples of hosting services are: Render or Heroku.
+
+--------------------------------------------------
+## Rubric
+
+1. Frontend Design + Deployment (25 points)
+	- Professional and visually appealing frontend design
+	- Consistent styling, layout, and navigation
+	- Responsive design across different screen sizes
+	- Successful deployment and accessibility of the application
+2. Signup/Signin + Server Setup (30 points)
+	- Functional user registration system
+	- Functional user authentication/login system
+	- Proper server configuration and setup 
+	- Secure handling of user authentication and sessions 
+3. Database + Data Persistence (25 points)
+	- Proper database design and implementation
+	- Successful Create, Read, Update, Delete (CRUD) operations
+	- Data persistence and storage reliability
+	- Appropriate database integration with the application
+4. API + Data Parsing (20 points)
+	- Successful integration of external or custom APIs
+	- Accurate data retrieval and parsing
+	- Error handling and validation of API responses
+	- Meaningful presentation and use of retrieved data
+
+--------------------------------------------------
+## Submission
+You will submit the link of your Github repository, where I will be able to see the full code and contributions. Also, you need to submit the app url for me visit your hosted project. All in all, you submission will be comprised of:
+	1. GitHub repository url
+	2. Deployed web app url
+	3. A test username/password for me to login and test you app.
+
+

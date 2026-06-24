@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/tutor.css" />
+  </head>
+  <body class="tutor-body">
+    <div class="tutor-container">
+      <div class="tutor-header">
+        <h1>AI Tutor</h1>
+        <div>
+          <span>Welcome, <%= name %></span>
+          <a href="/profile" style="margin-left:10px;">Profile</a>
+          <form method="POST" action="/users/logout" style="display:inline;">
+            <button type="submit" class="logout-btn">Log out</button>
+          </form>
+        </div>
+      </div>
+
+      <form method="POST" action="/tutor/ask" class="tutor-form">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <% subjects.forEach(function(s) { %>
+            <option value="<%= s %>" <%= (selectedSubject === s) ? 'selected' : '' %>><%= s %></option>
+          <% }); %>
+        </select>
+
+        <label for="question">Your question</label>
+        <textarea id="question" name="question" rows="4" placeholder="e.g. Can you explain how photosynthesis works?"><%= question || '' %></textarea>
+
+        <input type="submit" value="Ask the tutor">
+      </form>
+
+      <% if (error) { %>
+        <p class="tutor-error"><%= error %></p>
+      <% } %>
+
+      <% if (answer) { %>
+        <div class="tutor-answer">
+          <h2>Answer</h2>
+          <p><%= answer %></p>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>

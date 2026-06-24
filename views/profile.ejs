@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/tutor.css" />
+  </head>
+  <body class="tutor-body">
+    <div class="tutor-container">
+      <div class="tutor-header">
+        <h1>Your Profile</h1>
+        <a href="/tutor">&larr; Back to tutor</a>
+      </div>
+
+      <p><strong>Email:</strong> <%= email %></p>
+
+      <form method="POST" action="/profile/update" class="tutor-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="<%= name %>" />
+
+        <label for="newPassword">New password (leave blank to keep current)</label>
+        <input type="password" id="newPassword" name="newPassword" minlength="8" />
+
+        <input type="submit" value="Save changes">
+      </form>
+
+      <% if (error) { %>
+        <p class="tutor-error"><%= error %></p>
+      <% } %>
+      <% if (success) { %>
+        <p style="color: green; margin-top: 15px;"><%= success %></p>
+      <% } %>
+
+      <hr style="margin: 25px 0;">
+
+      <form method="POST" action="/profile/delete" onsubmit="return confirm('Delete your account? This cannot be undone.');">
+        <button type="submit" class="logout-btn" style="background-color:#b00020;">Delete account</button>
+      </form>
+    </div>
+  </body>
+</html>
