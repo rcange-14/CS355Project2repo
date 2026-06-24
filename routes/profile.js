@@ -5,7 +5,7 @@ const { requireAuth } = require('../auth');
 const { ObjectId } = require('mongodb');
 const crypto = require('crypto');
 
-// GET /profile - show current user's info and the update form
+
 router.get('/', requireAuth, async function (req, res) {
   try {
     const conn = getCollection('users');
@@ -27,7 +27,7 @@ router.get('/', requireAuth, async function (req, res) {
   }
 });
 
-// POST /profile/update - update name and/or password
+
 router.post('/update', requireAuth, async function (req, res) {
   try {
     const conn = getCollection('users');
@@ -45,7 +45,7 @@ router.post('/update', requireAuth, async function (req, res) {
     }
 
     if (newPassword && newPassword.trim()) {
-      // Same validation rules as signup: 8+ chars, not equal to email or name
+      
       if (newPassword.length < 8) {
         return res.render('profile', {
           name: user.name,
@@ -94,7 +94,7 @@ router.post('/update', requireAuth, async function (req, res) {
   }
 });
 
-// POST /profile/delete - delete the account and end the session
+
 router.post('/delete', requireAuth, async function (req, res) {
   try {
     const conn = getCollection('users');
